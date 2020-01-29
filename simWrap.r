@@ -223,7 +223,7 @@ simmer_wrapper <- function(i) {
       ))) 1 else 0
     },continue=TRUE,common_seize_new_ward) %>% 
     rollback(5,Inf,function() {now(env)<get_attribute(env,"end_time_spell")}) %>% ## to timeout
-    simmer::select(function() { wards$Ward[get_attribute(env,"cur_ward_idx")]  }) %>% 
+    select(function() { wards$Ward[get_attribute(env,"cur_ward_idx")]  }) %>% 
     release_selected() %>% 
     release("bed")
   

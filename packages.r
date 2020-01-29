@@ -4,6 +4,7 @@ library(purrrlyr)
 library(digest)
 library(tidyr)
 library(stringr)
+library(lubridate)
 library(bizdays) 
 max<-base::max
 min<-base::min
@@ -13,6 +14,7 @@ library(simmer.plot)
 library(progress)
 library(Rcpp)
 select<-simmer::select
+rollback<-simmer::rollback
 library(timeDate)
 library(future.apply)
 library(here)
