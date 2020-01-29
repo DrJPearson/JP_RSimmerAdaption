@@ -1,7 +1,9 @@
 ################################################################################
 # Project Name: TLSimmerTest
 # Date Last Updated: 27/11/19
-# Summary: NOT ADAPTED YET
+# Summary: Control of esclation wards.  Top of code contains definitions of wards
+# including number of possible beds.  Bottom contains conditions when to open
+# these escalation wards.  Each ward once opened stays open for 24 hours.
 ################################################################################
 
 pressure_days<-0

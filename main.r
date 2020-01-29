@@ -91,7 +91,7 @@ searchDateWindowEl <- as.difftime(2,units="weeks") ## 2 weeks before and after
 
 ## Main simulation
 print("* Simulation started (no output) *")
-envs<-future_lapply(1:48,simmer_wrapper)
+envs<-future_lapply(1:12,simmer_wrapper) ##48
 print("* Simulation finished *")
 
 
@@ -122,3 +122,7 @@ print(ggplot(resources,aes(x=rdate,y=server,color=replication)) +
         xlim(startDate,endDate)  +
         labs(x="Date",y="Beds") + theme_bw(base_size=12)+
         ggtitle("testchart"))
+
+get_palette <- scales::brewer_pal(type = "qual", palette = 1)
+plot(elective_patient, fill = get_palette)
+plot(emergency_patient, fill = get_palette)
